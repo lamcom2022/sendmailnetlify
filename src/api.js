@@ -31,18 +31,11 @@ transporter.verify((error, success) => {
 
 router.post('/sendmail', (req, res, next) => {
     //make mailable object
-    debugger
-    //alert(req)
-    console.log("Email_Router===", req.body.first_name);
-    
     const mail = {
-        // from: process.env.SMTP_FROM_EMAIL,
-        from: "info@lamhouse.in",
-        //to: process.env.SMTP_TO_EMAIL,
-        //to: "pradeephari1594@gmail.com",
+        from: req.body.frommail,
         to: req.body.email,
-        cc: "sureshbabuweb@gmail.com,ravintherr.r@gmail.com",
-        bcc: "sureshbabu73@gmail.com",
+        cc: req.body.ccmail,
+        bcc: req.body.bccmail,
         subject: 'New Contact Form Submission',
         text: `
         from: "${req.body.first_name}"
@@ -58,7 +51,7 @@ router.post('/sendmail', (req, res, next) => {
             })
         } else {
             res.json({
-                status: 'success Hi',
+                status: 'success',
             })
         }
     })
