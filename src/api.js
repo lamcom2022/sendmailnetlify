@@ -57,6 +57,7 @@ router.post('/sendmail', (req, res, next) => {
         message:"${req.body.description}"`,
         "attachment": [
             {
+                "filname": "Test.pdf",
                 path: "./Test.pdf"
             }]
     }
