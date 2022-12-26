@@ -49,12 +49,12 @@ router.post('/sendmail', (req, res, next) => {
         cc: req.body.ccmail,
         bcc: req.body.bccmail,
         subject: 'New Contact Form Submission',
-        text: "",
-        from: "${req.body.first_name}",
-        email: "${req.body.email}",
-        phone: "${req.body.phone_number}",
-        company: "${req.body.company}",
-        message:"${req.body.description}",
+        text: "Test PDF email",
+        from: `${req.body.first_name}`,
+        email: `${req.body.email}`,
+        phone: `${req.body.phone_number}`,
+        company: `${req.body.company}`,
+        message: `${req.body.description}`,
         attachments: [
             {
                 "filname": "Test.pdf",
@@ -65,6 +65,7 @@ router.post('/sendmail', (req, res, next) => {
         if (err) {
             res.json({
                 status: 'fail',
+                error: err
             })
         } else {
             res.json({
