@@ -49,13 +49,13 @@ router.post('/sendmail', (req, res, next) => {
         cc: req.body.ccmail,
         bcc: req.body.bccmail,
         subject: 'New Contact Form Submission',
-        text: `
-        from: "${req.body.first_name}"
-        email: "${req.body.email}"
-        phone: "${req.body.phone_number}"
-        company: "${req.body.company}"
-        message:"${req.body.description}"`,
-        "attachment": [
+        text: "",
+        from: "${req.body.first_name}",
+        email: "${req.body.email}",
+        phone: "${req.body.phone_number}",
+        company: "${req.body.company}",
+        message:"${req.body.description}",
+        attachments: [
             {
                 "filname": "Test.pdf",
                 path: "./Test.pdf"
