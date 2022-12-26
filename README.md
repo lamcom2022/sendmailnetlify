@@ -9,7 +9,6 @@ https://www.youtube.com/watch?v=hQAu0YEIF0g
 # Hostinger CC Mail
 
 # lamhouse.in
-
 username: ravinther@lamhouse.in
 password: l@mhousE12#
 
