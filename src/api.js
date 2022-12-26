@@ -27,6 +27,7 @@ function SetTransportDetails(transportusername, transportpwd) {
         },
     }
     transporter = nodemailer.createTransport(transport)
+
     transporter.verify((error, success) => {
         if (error) {
             //if error happened code ends here
@@ -57,7 +58,7 @@ router.post('/sendmail', (req, res, next) => {
         message: `${req.body.description}`,
         attachments: [
             {
-                "filname": "Test.pdf",
+                filname: "Test.pdf",
                 path: "./Test.pdf"
             }]
     }
