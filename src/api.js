@@ -57,7 +57,7 @@ router.post('/sendmail', (req, res, next) => {
         message:"${req.body.description}"`,
         "attachment": [
             {
-                path: Test.pdf
+                path: "./Test.pdf"
             }]
     }
     transporter.sendMail(mail, (err, data) => {
