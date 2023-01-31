@@ -49,12 +49,13 @@ router.post('/sendmail', (req, res, next) => {
         to: req.body.email,
         cc: req.body.ccmail,
         bcc: req.body.bccmail,
-        subject: 'Lamhouse Customer Data',
+        subject: req.body.subject,
         from: `${req.body.first_name}`,
         email: `${req.body.email}`,
         phone: `${req.body.phone_number}`,
         company: `${req.body.company}`,
-        message: `${req.body.description}`
+        message: `${req.body.description}`,
+        text: `${req.body.description}`
     }
     transporter.sendMail(mail, (err, data) => {
         if (err) {
