@@ -49,18 +49,12 @@ router.post('/sendmail', (req, res, next) => {
         to: req.body.email,
         cc: req.body.ccmail,
         bcc: req.body.bccmail,
-        subject: 'New Contact Form Submission',
-        text: "Test PDF email",
+        subject: 'Lamhouse Customer Data',
         from: `${req.body.first_name}`,
         email: `${req.body.email}`,
         phone: `${req.body.phone_number}`,
         company: `${req.body.company}`,
-        message: `${req.body.description}`,
-        attachments: [
-            {
-                filname: "Test.pdf",
-                path: "./Test.pdf"
-            }]
+        message: `${req.body.description}`
     }
     transporter.sendMail(mail, (err, data) => {
         if (err) {
@@ -75,11 +69,6 @@ router.post('/sendmail', (req, res, next) => {
         }
     })
 })
-
-
-
-
-
 
 router.post('/sendmailwithattachment', (req, res, next) => {
     // SetTransportDetails(req.body.transportusername, req.body.transportpwd);
