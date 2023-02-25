@@ -5,22 +5,24 @@
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.20.1",
+    "chrome-aws-lambda": "^2.0.0",
     "cors": "^2.8.5",
     "express": "^4.16.4",
-    "nodemailer": "^6.8.0",
-    "pdf-creator-node": "^2.3.5",
-    "serverless": "^3.26.0",
-    "serverless-http": "^1.9.1",
-    "chrome-aws-lambda": "^2.0.0",
     "handlebars": "^4.5.1",
+    "nodemailer": "^6.8.0",
+    "nodemon": "^2.0.20",
+    "pdf-creator-node": "^2.3.5",
     "pug": "^2.0.4",
+    "puppeteer": "^19.7.0",
     "puppeteer-core": "^2.0.0",
+    "serverless": "^3.26.0",
     "serverless-apigw-binary": "^0.4.4",
+    "serverless-http": "^1.9.1",
     "serverless-offline": "^5.12.0"
   },
   "scripts": {
-    "start" : "node index.js",
-    "deploy": "serverless deploy"
+    "deploy": "serverless deploy",
+    "start": "nodemon app"
   },
   "repository": {
     "type": "git",

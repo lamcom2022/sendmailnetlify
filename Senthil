@@ -1,0 +1,41 @@
+
+## Senthil 
+
+1. Docker 
+2. fly.io - docker free hosting
+3. puppeteer - in Docker
+4. netlify
+5. vercel 
+6. cloudflare
+7. denolands - Node JS 
+8. TCP /IP - Database 
+9. Superbase  --> postgresql
+1. Edge Computing --> Data proxy (Pxy server)
+1. Guttenberg
+1. Dbvisualizer
+
+
+### Storage 
+1. S3
+1. Mini.IO
+1. Supabase Storage
+
+
+### Netlify
+1. go true from netlify
+
+    1.  To Store Data temperarily
+    
+
+
+### prisma
+1. data proxy
+1. graphql 
+
+### Email 
+1. whitelisting
+1. AWS SES
+1. Mail channels - Only Cloudflare
+    - Wrangler 
+1. Netlify - Temp directory
+1. [Maizzle Email Template Service](https://maizzle.com/)
